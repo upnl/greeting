@@ -4,6 +4,7 @@
 ```shell
 sudo ln -s "$PWD/sodrak" /var/www/welcome
 sudo ln -s "$PWD/gemini" /usr/share/nginx/welcome
+sudo ln -s "$PWD/uriel" /usr/share/nginx/welcome
 ```
 
 ### Apache2/Nginx 설정
