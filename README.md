@@ -4,9 +4,8 @@
 ```shell
 git clone https://github.com/upnl/greeting.git
 
-# apache2
+# 배포판에 따라 두곳중 한곳 택일
 sudo mv greetings /var/www/
-# nginx
 sudo mv greetings /usr/share/nginx/
 ```
 
