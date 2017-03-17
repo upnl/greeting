@@ -2,16 +2,19 @@
 ========
 서버별 안내 페이지입니다.
 ```shell
-sudo ln -s "$PWD/sodrak" /var/www/welcome
-sudo ln -s "$PWD/gemini" /usr/share/nginx/welcome
-sudo ln -s "$PWD/uriel" /usr/share/nginx/welcome
+git clone https://github.com/upnl/greeting.git
+
+# apache2
+sudo mv greetings /var/www/
+# nginx
+sudo mv greetings /usr/share/nginx/
 ```
 
-### Apache2/Nginx 설정
+### 웹서버 설정
 ```apache
 # apache2
 <VirtualHost *:80>
-  DocumentRoot /var/www/welcome
+  DocumentRoot /var/www/greeting/<SERVER_NAME>
 </VirtualHost>
 ```
 ```Nginx
@@ -19,6 +22,6 @@ sudo ln -s "$PWD/uriel" /usr/share/nginx/welcome
 server {
   listen 80 default_server;
   server_name _;
-  root /usr/share/nginx/welcome;
+  root /usr/share/nginx/greeting/<SERVER_NAME>;
 }
 ```
